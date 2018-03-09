@@ -9,6 +9,7 @@ import {Provider} from 'react-redux';
 import configureStore from './store/configureStore';
 import { loadState, saveState } from './localStorage';
 
+
 const persistedState = loadState();
 const store = configureStore();
 

@@ -7,6 +7,7 @@ import  Dashboard from './components/dashboard';
 import {LandingPage} from './components/landingPage';
 import Menu from './components/menu';
 import Login from './components/Login';
+import { OnUpdate } from 'rrc'
 
 
 
@@ -14,9 +15,14 @@ import Login from './components/Login';
 export  class App extends React.Component {
 
     render() {
+        
     return(
         <Router>
             <div>
+            <OnUpdate
+         call={(location) => {
+         console.log("Url is changed")
+  }} />
                 <Menu/>
                 <Switch>
                     <Route exact path="/" component={LandingPage}/>
